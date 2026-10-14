@@ -1,32 +1,27 @@
 # Sakshi Talapade — Interactive Portfolio
 
-A responsive, single-page portfolio built with HTML, CSS, and vanilla JavaScript. Designed for GitHub Pages.
+A responsive, single-page portfolio built with HTML, CSS, and vanilla JavaScript for GitHub Pages.
 
 ## Features
-- Responsive layout for desktop and mobile
-- Project-category filters
-- Interactive project detail dialogs
-- Light/dark theme toggle
-- Scroll reveal animations
-- No build tools or dependencies required
+- Responsive design and light/dark mode
+- Interactive project filters and case-study dialogs
+- Eight featured projects with evidence-aware summaries
+- Additional case-study placeholders in `script.js` (Cash-Flow Copilot, CarePath AI, Supply Chain Forecasting, Fraud Detection, Campusafe+) ready to add as cards when desired
+- No build tools required
 
 ## Before publishing
-Search the files for these placeholders and replace them:
-- `ADD_YOUR_EMAIL`
-- `ADD_YOUR_LINKEDIN_URL`
-- `ADD_YOUR_RESUME_URL`
+Replace these placeholders in `index.html`: `ADD_YOUR_EMAIL`, `ADD_YOUR_LINKEDIN_URL`, and `ADD_YOUR_RESUME_URL`. Add screenshots, public demo/code links, and other shareable artefacts where appropriate. Check all dates, metrics, and descriptions carefully. Label measured results, estimates, and proposed impact distinctly.
 
-Also verify all project descriptions and replace any practice-project content with your confirmed resume-backed work. The food-delivery analytics project is explicitly labelled as a simulated practice exercise. The AI Job Application Copilot is labelled in progress.
+The current featured projects are AI Job Application Copilot, Smart Hostel Laundry System, Food Delivery — Delivery Confidence, Customer Health & Churn Prediction, Natural Language Analytics Assistant, Churn Prediction & Retention Strategy, E-Cell UDAAN/In-Verse, and Campus Food-Waste Reduction. Project descriptions are based on the information supplied by Sakshi; detailed implementation evidence can be added later.
 
 ## Run locally
-Open `index.html` in your browser.
+Open `index.html` in a browser.
 
 ## Publish with GitHub Pages
-1. Create a GitHub repository named `sakshi-portfolio` (or another name you prefer).
+1. Create a repository named `sakshi-portfolio` (or another name you prefer).
 2. Upload `index.html`, `style.css`, `script.js`, and `README.md` to the repository root.
-3. Open the repository's **Settings → Pages**.
-4. Under **Build and deployment**, select **Deploy from a branch**.
-5. Select branch `main` and folder `/ (root)`, then click **Save**.
-6. Wait for GitHub Pages to provide your live website URL.
+3. Open **Settings → Pages**.
+4. Under **Build and deployment**, choose **Deploy from a branch**, branch `main`, folder `/(root)`, then save.
+5. Wait for GitHub Pages to show your live URL.
 
-The website is static, so GitHub Pages can host it for free.
+The site is static and can be hosted on GitHub Pages for free.

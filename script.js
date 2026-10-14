@@ -1,83 +1,24 @@
 const projectData = {
-  copilot: {
-    kicker: "PRODUCT · AI / NLP · IN PROGRESS",
-    title: "AI Job Application Copilot",
-    summary: "A product concept and in-progress build exploring how candidates can compare job opportunities, understand role fit, and identify skill gaps.",
-    detail: "<strong>Problem</strong><br>Job seekers can struggle to prioritise roles and understand why a job is or isn't a good fit.<br><br><strong>Approach</strong><br>Explore profile-to-job matching using NLP and embeddings, with explainable ranking signals such as skill similarity, experience fit, and role preferences.<br><br><strong>Success measures to evaluate</strong><br>Recommendation relevance, ranking quality, skill-gap usefulness, and application intent.<br><br><strong>Status</strong><br>In progress. The final case study will distinguish implemented functionality from planned evaluation."
-  },
-  analytics: {
-    kicker: "ANALYTICS · SQL · PRACTICE PROJECT",
-    title: "Funnel & Growth Analytics",
-    summary: "A simulated food-delivery checkout scenario used to practise funnel diagnosis, metric definition, and experiment design.",
-    detail: "<strong>Question</strong><br>At which step might users be dropping out of the checkout journey?<br><br><strong>Approach</strong><br>Define funnel events, calculate step-to-step conversion, segment the journey, and investigate plausible friction points before proposing a test.<br><br><strong>Deliverables to build</strong><br>SQL analysis, a compact dashboard, a prioritised hypothesis, and an experiment plan.<br><br><strong>Transparency</strong><br>This is a practice scenario. No real company data or measured business impact is claimed."
-  },
-  strategy: {
-    kicker: "LEADERSHIP · MARKETING & PR · E-CELL IIT MADRAS",
-    title: "Building campaigns at E-Cell, IIT Madras",
-    summary: "A leadership story about creating campaigns that connect entrepreneurship with rural communities, technology, art, and sustainable livelihoods.",
-    detail: "<strong>Role</strong><br>Lead, Marketing & PR Department for two years; founded the UDAAN and In-Verse campaigns.<br><br><strong>What this can demonstrate</strong><br>Campaign framing, stakeholder coordination, storytelling, team leadership, and translating a broad mission into activities.<br><br><strong>Next step</strong><br>Add verified campaign details, specific contributions, and any defensible reach or participation figures from the resume or original records."
-  }
+  copilot:{kicker:"PRODUCT · AI / NLP · IN PROGRESS",title:"AI Job Application Copilot",summary:"An AI-assisted job discovery product designed to help candidates understand role fit, identify skill gaps, and prioritise relevant opportunities.",detail:"<strong>Problem</strong><br>Job seekers often face a large set of roles and limited clarity on how well their experience matches each one.<br><br><strong>Product approach</strong><br>Use NLP and embeddings to map candidate profiles to job descriptions. Combine skill similarity, experience fit, and role preferences in an explainable ranking framework.<br><br><strong>Evaluation plan</strong><br>Assess recommendation relevance, ranking quality, usefulness of skill-gap insights, engagement, and apply intent.<br><br><strong>Portfolio additions</strong><br>Add a system diagram, screenshots, a short demo, and a clear list of implemented versus planned features."},
+  laundry:{kicker:"PRODUCT DISCOVERY · UX · PROTOTYPE",title:"Smart Hostel Laundry System",summary:"A shared-facility management concept developed to reduce uncertainty, waiting, and poor planning around hostel laundry.",detail:"<strong>Problem discovery</strong><br>The project presentation documents interviews with 10+ students; 8/10 reported frequent waiting, 7/10 repeatedly checked machines, and 9/10 said they would use a real-time solution.<br><br><strong>Solution</strong><br>A unified experience for real-time machine availability, advance booking, timers and notifications, and an admin dashboard.<br><br><strong>Prototype and iteration</strong><br>A Google Stitch prototype simulated the student journey. Feedback informed clearer machine-status indicators, fewer booking steps, and improved labels and buttons.<br><br><strong>Next steps</strong><br>Pilot in one hostel block, validate actual machine-status integration, and measure waiting time, booking completion, and repeat usage."},
+  fooddelivery:{kicker:"PRODUCT · PRD · ROADMAP",title:"Food Delivery App — Delivery Confidence",summary:"A product case study focused on reducing delivery uncertainty with dynamic ETAs and proactive delay alerts.",detail:"<strong>User problem</strong><br>Delivery uncertainty can undermine trust and contribute to cancellations or support contacts.<br><br><strong>Proposed experience</strong><br>Dynamic ETAs, timely delay notifications, and clearer order-status communication.<br><br><strong>Product artefacts</strong><br>PRD, Figma user flows, RICE-prioritised roadmap, and an experimentation framework.<br><br><strong>Success measures</strong><br>Track cancellation rate, ETA error, support contacts per order, and trust or satisfaction. Any reduction in cancellations should be labelled as a projection unless validated with experiment data."},
+  healthchurn:{kicker:"DATA ANALYTICS · ML · BI",title:"Customer Health & Churn Prediction Platform",summary:"A customer-risk workflow combining data transformation, health scoring, churn prediction, explainability, and reporting.",detail:"<strong>Problem</strong><br>Customer-success teams need a consistent way to identify accounts at risk and understand which behaviours may signal churn.<br><br><strong>Approach described in the project</strong><br>Transform user activity data into health indicators across product dimensions; use an XGBoost model and SHAP-based explanations; summarise high-risk cohorts and surface results in Power BI.<br><br><strong>Decision support</strong><br>Connect risk signals to proactive customer-success follow-up.<br><br><strong>Evidence to add</strong><br>Dataset description, train/test split, class balance, recall definition, baseline comparison, dashboard screenshots, and the basis for any reporting-time improvement. Keep performance claims tied to the evaluation setup."},
+  nlanalytics:{kicker:"AI · BI · NATURAL LANGUAGE",title:"AI-Powered Natural Language Analytics Assistant",summary:"A self-service analytics experience designed to turn business questions into SQL queries, consistent metrics, and visual insights.",detail:"<strong>Problem</strong><br>Business teams can depend on analysts for recurring data questions and may receive inconsistent metric definitions.<br><br><strong>Approach</strong><br>Define a semantic layer and metrics such as Revenue, MAU, and Churn; retrieve relevant context before generating SQL; and render charts and KPIs in a Streamlit interface.<br><br><strong>Evaluation</strong><br>Test SQL execution correctness, answer accuracy, metric consistency, safe handling of ambiguous questions, and time to insight.<br><br><strong>Evidence to add</strong><br>Architecture diagram, example questions and generated SQL, failure cases, evaluation dataset, and measured baseline behind any claimed accuracy or time savings."},
+  churnstrategy:{kicker:"DATA ANALYTICS · CLASSIFICATION · RETENTION",title:"Customer Churn Prediction & Retention Strategy",summary:"A classification and decision framework connecting behavioural churn-risk signals to prioritised retention actions.",detail:"<strong>Approach</strong><br>Clean and explore behavioural data with Python and SQL, engineer risk-related features, and train classification models to identify high-risk profiles.<br><br><strong>Business translation</strong><br>Map risk tiers to targeted retention campaigns so teams can prioritise outreach rather than treating every account identically.<br><br><strong>Evaluation</strong><br>Report precision, recall, class balance, and confusion matrix alongside a baseline. Treat any retention lift as measured only if supported by a defined test or credible before/after analysis.<br><br><strong>Portfolio additions</strong><br>Add a notebook excerpt, model comparison, feature importance, and the retention scoring matrix."},
+  ecell:{kicker:"LEADERSHIP · MARKETING & PR · E-CELL IIT MADRAS",title:"UDAAN & In-Verse — Social Campaigns",summary:"Campaign leadership connecting entrepreneurship with rural communities and the creative arts ecosystem.",detail:"<strong>UDAAN · Rural Innovation & Entrepreneurship</strong><br>Campaign activities described in your material include rural-business consulting, local community radio sessions, rural business stalls, entrepreneur conversations, and connecting community-centred projects with potential supporters.<br><br><strong>In-Verse · Art Entrepreneurship</strong><br>The campaign vision centred on helping artists explore sustainable careers through digital selling, branding, mass-media storytelling, creative-industry learning, and links between art startups and investors.<br><br><strong>Your story</strong><br>Show your role as Lead of Marketing & PR, what you personally initiated or executed, collaborators, campaign materials, and verifiable outcomes. Clearly separate delivered initiatives from planned ones."},
+  foodwaste:{kicker:"BUSINESS ANALYSIS · SUSTAINABILITY · SHA A S T R A 2025",title:"Mitigating Food Waste in Campus Dining",summary:"A team case competition project investigating food waste in campus dining and proposing practical operational and behavioural interventions.",detail:"<strong>Problem discovery</strong><br>The presentation describes dining-service observations and student survey responses, including unpredictable demand, plate waste, production waste, and limited information on which dishes are wasted most.<br><br><strong>Recommendations</strong><br>Portion choice and refill stations, awareness prompts, feedback-led menu improvements, data analysis for demand planning, and exploration of waste segregation and reuse options.<br><br><strong>What to show</strong><br>Your personal contribution, survey methodology and sample size, key findings, recommendation prioritisation, and how you would measure waste per meal, production waste, and adoption of portion choices."},
+  cashflow:{kicker:"PRODUCT CASE STUDY · FINTECH · PLACEHOLDER",title:"AI Cash-Flow Copilot",summary:"A proposed personal-finance product for cash-flow forecasting and goal-based spending insights.",detail:"<strong>Problem</strong><br>Help users understand upcoming cash flow and make spending decisions aligned with their goals.<br><br><strong>Planned case-study sections</strong><br>Target segment and user problem, three user journeys, PRD and roadmap, recommendation logic, edge cases and guardrails, wireframes, and an experimentation plan.<br><br><strong>Placeholder</strong><br>Add your actual flows, wireframes, decision logic, and evidence. Clearly label this as a design case study if no production implementation exists."},
+  carepath:{kicker:"PRODUCT CASE STUDY · HEALTHTECH · PLACEHOLDER",title:"CarePath AI",summary:"A proposed healthcare-navigation experience for helping patients understand care pathways and discover providers.",detail:"<strong>Problem</strong><br>Patients may struggle to determine the next appropriate step and find relevant care providers.<br><br><strong>Planned case-study sections</strong><br>Patient journey, provider discovery, conversational intake, escalation rules, privacy and safety guardrails, and measures such as time-to-care and completion rate.<br><br><strong>Placeholder</strong><br>Add your real research, journey maps, flows, and prototype. Describe safety rules as designed safeguards, not clinically validated outcomes."},
+  supplychain:{kicker:"DATA ANALYTICS · FORECASTING · PLACEHOLDER",title:"Supply Chain Inventory Optimization & Forecasting",summary:"A forecasting and operational analytics project focused on demand variation, inventory bottlenecks, and stockout risk.",detail:"<strong>Approach</strong><br>Use SQL to analyse historical inventory data, Python time-series methods to forecast demand, and Power BI to surface stock levels and risks.<br><br><strong>Evidence to add</strong><br>Data source, forecast horizon, train/test design, error metric, comparison to a baseline, dashboard screenshots, and the calculation behind any cost-saving claim."},
+  fraud:{kicker:"DATA ANALYTICS · FINTECH · PLACEHOLDER",title:"Financial Fraud Detection & Risk Mitigation",summary:"A transaction-analysis project exploring suspicious patterns, classification, risk scores, and alert prioritisation.",detail:"<strong>Approach</strong><br>Clean transaction records, explore fraud patterns, train and evaluate a classifier, and connect risk scores to alert logic.<br><br><strong>Evidence to add</strong><br>Dataset provenance, class imbalance handling, precision/recall, false-positive trade-offs, validation method, and examples of how alerts would be used. Avoid implying real fraud losses were prevented unless that was measured."},
+  campusafe:{kicker:"INNOVATION · CAMPUS SAFETY · TEAM PROJECT",title:"Campusafe+ — Managing Monkey Disturbances",summary:"A team proposal exploring humane ways to reduce monkey disturbances in campus outdoor spaces.",detail:"<strong>Problem</strong><br>Students and staff may avoid outdoor areas due to food snatching, property disturbance, and unpredictable encounters.<br><br><strong>Solution exploration</strong><br>The proposal compares waste controls, designated spaces, motion-triggered sound deterrents, landscape changes, and awareness measures, then suggests phased monitoring.<br><br><strong>Important limitation</strong><br>Effectiveness figures in the presentation are research-based or estimated, not evidence of a campus pilot. Present this as a proposal and include your individual contribution."}
 };
-
-const cards = [...document.querySelectorAll(".project-card")];
-const filters = [...document.querySelectorAll(".filter")];
-filters.forEach(button => button.addEventListener("click", () => {
-  filters.forEach(item => item.classList.toggle("active", item === button));
-  const selected = button.dataset.filter;
-  cards.forEach(card => {
-    const show = selected === "all" || card.dataset.category === selected;
-    card.classList.toggle("hidden", !show);
-  });
-}));
-
-const dialog = document.getElementById("projectDialog");
-const titleEl = document.getElementById("dialogTitle");
-const kickerEl = document.getElementById("dialogKicker");
-const summaryEl = document.getElementById("dialogSummary");
-const detailEl = document.getElementById("dialogDetail");
-function openProject(card) {
-  const category = card.dataset.category;
-  const key = category === "product" ? "copilot" : category === "analytics" ? "analytics" : "strategy";
-  const data = projectData[key];
-  kickerEl.textContent = data.kicker;
-  titleEl.textContent = data.title;
-  summaryEl.textContent = data.summary;
-  detailEl.innerHTML = data.detail;
-  dialog.showModal();
-}
-cards.forEach(card => {
-  card.addEventListener("click", () => openProject(card));
-  card.addEventListener("keydown", event => {
-    if (event.key === "Enter" || event.key === " ") {
-      event.preventDefault();
-      openProject(card);
-    }
-  });
-});
-document.getElementById("dialogClose").addEventListener("click", () => dialog.close());
-dialog.addEventListener("click", event => {
-  if (event.target === dialog) dialog.close();
-});
-
-const themeToggle = document.getElementById("themeToggle");
-themeToggle.addEventListener("click", () => {
-  document.body.classList.toggle("dark");
-  const isDark = document.body.classList.contains("dark");
-  themeToggle.setAttribute("aria-label", isDark ? "Switch to light mode" : "Switch to dark mode");
-  themeToggle.textContent = isDark ? "☼" : "◐";
-});
-
-const revealItems = document.querySelectorAll(".reveal");
-if ("IntersectionObserver" in window) {
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.12 });
-  revealItems.forEach(item => observer.observe(item));
-} else {
-  revealItems.forEach(item => item.classList.add("visible"));
-}
+const cards=[...document.querySelectorAll('.project-card')];
+const filters=[...document.querySelectorAll('.filter')];
+filters.forEach(button=>button.addEventListener('click',()=>{filters.forEach(item=>item.classList.toggle('active',item===button));const selected=button.dataset.filter;cards.forEach(card=>card.classList.toggle('hidden',!(selected==='all'||card.dataset.category===selected)));}));
+const dialog=document.getElementById('projectDialog');
+function openProject(card){const data=projectData[card.dataset.project];if(!data)return;document.getElementById('dialogKicker').textContent=data.kicker;document.getElementById('dialogTitle').textContent=data.title;document.getElementById('dialogSummary').textContent=data.summary;document.getElementById('dialogDetail').innerHTML=data.detail;dialog.showModal();}
+cards.forEach(card=>{card.addEventListener('click',()=>openProject(card));card.addEventListener('keydown',event=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();openProject(card);}});});
+document.getElementById('dialogClose').addEventListener('click',()=>dialog.close());dialog.addEventListener('click',event=>{if(event.target===dialog)dialog.close();});
+const themeToggle=document.getElementById('themeToggle');themeToggle.addEventListener('click',()=>{document.body.classList.toggle('dark');const dark=document.body.classList.contains('dark');themeToggle.setAttribute('aria-label',dark?'Switch to light mode':'Switch to dark mode');themeToggle.textContent=dark?'☼':'◐';});
+const revealItems=document.querySelectorAll('.reveal');if('IntersectionObserver'in window){const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target);}}),{threshold:.12});revealItems.forEach(item=>observer.observe(item));}else revealItems.forEach(item=>item.classList.add('visible'));
